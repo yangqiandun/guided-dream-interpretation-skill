@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{DREAM_TITLE}} · 梦境手记</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #050505;
+      --text: #d8d4ca;
+      --text-strong: #f2eee5;
+      --muted: #8d8980;
+      --line: #292824;
+      --accent: #b8ad91;
+      --canvas-width: 1080px;
+      --page-padding: 72px;
+      --body-size: 36px;
+      --body-leading: 1.9;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      background: var(--page);
+    }
+
+    body {
+      color: var(--text);
+      font-family: "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", Georgia, serif;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .dream-note {
+      width: var(--canvas-width);
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 76px var(--page-padding) 112px;
+      background: var(--page);
+    }
+
+    .note-kicker {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      color: var(--accent);
+      font-size: 20px;
+      line-height: 1.4;
+      letter-spacing: .22em;
+    }
+
+    .note-kicker::before {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .note-title {
+      margin: 26px 0 0;
+      color: var(--text-strong);
+      font-size: 64px;
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: .02em;
+    }
+
+    .note-meta {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+    }
+
+    .note-date {
+      display: block;
+      color: var(--muted);
+      font-size: 24px;
+      line-height: 1.4;
+      letter-spacing: .05em;
+    }
+
+    .dream-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      margin-top: 54px;
+      object-fit: cover;
+      background: #111;
+    }
+
+    .note-section { margin-top: 92px; }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 44px auto 1fr;
+      align-items: center;
+      gap: 18px;
+      margin: 0 0 34px;
+    }
+
+    .section-index {
+      color: var(--accent);
+      font: italic 22px/1 Georgia, serif;
+      letter-spacing: .08em;
+    }
+
+    .section-title {
+      margin: 0;
+      color: var(--text-strong);
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: .16em;
+    }
+
+    .section-rule {
+      height: 1px;
+      background: var(--line);
+    }
+
+    .dream-body,
+    .report-body {
+      color: var(--text);
+      font-size: var(--body-size);
+      line-height: var(--body-leading);
+    }
+
+    .dream-body p,
+    .report-body p { margin: 0 0 34px; }
+
+    .report-section {
+      margin-top: 88px;
+      padding-top: 84px;
+      border-top: 1px solid var(--line);
+    }
+
+    .dream-body > :last-child,
+    .report-body > :last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+  <main class="dream-note">
+    <header class="note-header">
+      <div class="note-kicker">梦境手记</div>
+      <h1 class="note-title">{{DREAM_TITLE}}</h1>
+      <div class="note-meta">
+        <time class="note-date">{{DREAM_DATE}}</time>
+      </div>
+    </header>
+
+    <img class="dream-image" src="{{DREAM_IMAGE_SRC}}" alt="">
+
+    <section class="note-section dream-section">
+      <div class="section-heading">
+        <span class="section-index">01</span>
+        <h2 class="section-title">梦境</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="dream-body">{{DREAM_TEXT_HTML}}</div>
+    </section>
+
+    <section class="note-section report-section">
+      <div class="section-heading">
+        <span class="section-index">02</span>
+        <h2 class="section-title">解梦报告</h2>
+        <span class="section-rule"></span>
+      </div>
+      <div class="report-body">{{REPORT_HTML}}</div>
+    </section>
+  </main>
+</body>
+</html>
