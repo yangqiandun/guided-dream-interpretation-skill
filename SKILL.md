@@ -1,9 +1,9 @@
 ---
-name: guided-dream-interpretation
+name: dream-insights
 description: Use when the user shares a dream or asks to interpret, explore, or understand a dream, including 解梦 or 梦境解析.
 ---
 
-# 引导式个人解梦
+# Dream Insights
 
 ## 定位
 

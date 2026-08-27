@@ -1,4 +1,4 @@
-# 引导式个人解梦 Skill
+# Dream Insights
 
 一个通过针对性追问帮助用户理解个人梦境的 Codex Skill。它结合梦中的情绪、个人联想，以及梦与现实经验之间的相似、反差或缺席，形成一份有依据、深入且贴近个人经验的解梦报告。
 
@@ -18,7 +18,7 @@
 在 Codex 中调用 `$skill-installer`，并提供本仓库地址：
 
 ```text
-https://github.com/yangqiandun/guided-dream-interpretation-skill
+https://github.com/yangqiandun/dream-insights-skill
 ```
 
 ### 手动安装
@@ -26,7 +26,7 @@ https://github.com/yangqiandun/guided-dream-interpretation-skill
 克隆或下载仓库后，将整个目录放入：
 
 ```text
-~/.codex/skills/guided-dream-interpretation
+~/.codex/skills/dream-insights
 ```
 
 完成后重新打开 Codex，使 Skill 被重新加载。
@@ -36,7 +36,7 @@ https://github.com/yangqiandun/guided-dream-interpretation-skill
 可以直接分享梦境并要求解读，或显式调用：
 
 ```text
-$guided-dream-interpretation
+$dream-insights
 ```
 
 例如：
@@ -48,7 +48,7 @@ $guided-dream-interpretation
 ## 目录
 
 ```text
-guided-dream-interpretation/
+dream-insights/
 ├── SKILL.md
 ├── README.md
 ├── LICENSE
